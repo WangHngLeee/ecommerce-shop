@@ -46,10 +46,12 @@ const CartScreen = ({ match, location, history }) => {
           </Alert>
         ) : (
           <>
+            <h1>Shopping Cart </h1>
             <Link to='/'>
-              <Button variant='light'>back to shop</Button>
+              <Button variant='light'>
+                <i class='fas fa-chevron-left'></i> back to shop
+              </Button>
             </Link>
-            <h1>Shopping Cart</h1>
             <ListGroup variant='flush'>
               {cartItems.map((item) => (
                 <ListGroup.Item key={item.product}>
