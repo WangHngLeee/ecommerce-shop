@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form, Button, Col } from 'react-bootstrap'
+import { Form, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import FormContainer from '../components/FormContainer'
 import { savePaymentMethod } from '../actions/cartActions'
@@ -37,7 +37,7 @@ const PaymentScreen = ({ history }) => {
                 name='customRadio'
                 className='custom-control-input'
                 value='PayPal'
-                checked
+                checked='PayPal'
                 onChange={(e) => setPaymentMethod(e.target.value)}
               />
               <label className='custom-control-label' for='PayPal'>
