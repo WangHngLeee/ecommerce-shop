@@ -25,7 +25,7 @@ const PaymentScreen = ({ history }) => {
 
   return (
     <FormContainer>
-      <CheckoutSteps step1 step2 step3 size='32%' />
+      <CheckoutSteps step1 step2 step3 size='55%' />
       <h1>Payment</h1>
       <Form onSubmit={submitHandler}>
         <fieldset>
@@ -37,6 +37,7 @@ const PaymentScreen = ({ history }) => {
                 name='customRadio'
                 className='custom-control-input'
                 value='PayPal'
+                checked
                 onChange={(e) => setPaymentMethod(e.target.value)}
               />
               <label className='custom-control-label' for='PayPal'>

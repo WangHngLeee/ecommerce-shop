@@ -1,5 +1,5 @@
 import React from 'react'
-import { Nav } from 'react-bootstrap'
+import { Nav, Row } from 'react-bootstrap'
 import { Link, LinkContainer } from 'react-router-bootstrap'
 
 const CheckoutSteps = ({ step1, step2, step3, step4, size }) => {
@@ -43,12 +43,14 @@ const CheckoutSteps = ({ step1, step2, step3, step4, size }) => {
           )}
         </Nav.Item>
       </Nav>
-      <div className='progress'>
-        <div
-          className='progress-bar progress-bar-striped progress-bar-animated'
-          role='progressbar'
-          style={{ width: `${size}` }}
-        ></div>
+      <div className='justify-content-md-center'>
+        <div className='progress'>
+          <div
+            className='progress-bar progress-bar-striped progress-bar-animated'
+            role='progressbar'
+            style={{ width: `${size}` }}
+          ></div>
+        </div>
       </div>
     </>
   )
