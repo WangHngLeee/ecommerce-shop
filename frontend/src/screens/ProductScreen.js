@@ -24,7 +24,7 @@ const ProductScreen = ({ history, match }) => {
   return (
     <>
       <Link className='btn btn-light my-3' to='/'>
-        Back
+        <i class='fas fa-chevron-left'> Back </i>
       </Link>
       {loading ? (
         <Loader />

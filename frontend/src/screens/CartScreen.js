@@ -32,21 +32,20 @@ const CartScreen = ({ match, location, history }) => {
   return (
     <Row>
       <Col md={8}>
+        <h1>Shopping Cart </h1>
         {cartItems.length === 0 ? (
-          <Alert variant='light'>
-            <Alert.Heading style={{ fontSize: '30px' }}>
-              <i className='fas fa-sad-tear'></i> Oops...Your Cart is empty
-            </Alert.Heading>
-            <hr />
-            <div className='d-flex justify-content-end'>
-              <Link to='/'>
-                <Button variant='light'>back to shop</Button>
-              </Link>
-            </div>
-          </Alert>
+          <Message>
+            <i className='fas fa-sad-tear'></i> Your cart is empty{' '}
+            <Link style={{ textDecoration: 'none' }} to='/'>
+              <div className='d-flex justify-content-end'>
+                <Button className='btn-sm' variant='info'>
+                  Back to Shop
+                </Button>
+              </div>
+            </Link>
+          </Message>
         ) : (
           <>
-            <h1>Shopping Cart </h1>
             <Link to='/'>
               <Button variant='light'>
                 <i class='fas fa-chevron-left'></i> back to shop
