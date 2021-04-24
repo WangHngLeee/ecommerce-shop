@@ -4,7 +4,6 @@ import Message from '../components/Message'
 import { Link } from 'react-router-dom'
 import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import { addToCart, removeFromCart } from '../actions/cartActions'
-import { Alert } from 'react-bootstrap'
 const CartScreen = ({ match, location, history }) => {
   const productId = match.params.id
 
