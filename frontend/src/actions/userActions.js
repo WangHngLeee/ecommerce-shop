@@ -2,7 +2,9 @@ import axios from 'axios'
 import {
   USER_DETAILS_FAIL,
   USER_DETAILS_REQUEST,
+  USER_DETAILS_RESET,
   USER_DETAILS_SUCCESS,
+  USER_LIST_RESET,
   USER_LOGIN_FAIL,
   USER_LOGIN_REQUEST,
   USER_LOGIN_SUCCESS,
@@ -14,6 +16,8 @@ import {
   USER_UPDATE_PROFILE_REQUEST,
   USER_UPDATE_PROFILE_SUCCESS,
 } from '../constants/userConstants'
+import { ORDER_LIST_MY_RESET } from '../constants/orderConstants'
+
 export const login = (email, password) => async (dispatch) => {
   try {
     dispatch({
@@ -51,6 +55,14 @@ export const login = (email, password) => async (dispatch) => {
 
 export const logout = () => (dispatch) => {
   localStorage.removeItem('userInfo')
+  localStorage.removeItem('cartItems')
+  localStorage.removeItem('shippingAddress')
+  localStorage.removeItem('paymentMethod')
+  dispatch({ type: USER_LOGOUT })
+  dispatch({ type: USER_DETAILS_RESET })
+  dispatch({ type: ORDER_LIST_MY_RESET })
+  dispatch({ type: USER_LIST_RESET })
+  document.location.href = '/login'
   dispatch({ type: USER_LOGOUT })
 }
 
@@ -151,6 +163,11 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
       type: USER_UPDATE_PROFILE_SUCCESS,
       payload: data,
     })
+    dispatch({
+      type: USER_LOGIN_SUCCESS,
+      payload: data,
+    })
+    dispatch({ type: USER_DETAILS_RESET })
   } catch (error) {
     dispatch({
       type: USER_UPDATE_PROFILE_FAIL,

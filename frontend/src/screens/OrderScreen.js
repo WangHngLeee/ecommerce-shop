@@ -70,9 +70,18 @@ const OrderScreen = ({ match }) => {
     <Message variant='danger'>{error}</Message>
   ) : (
     <>
-      <h1>
-        <i class='fas fa-box-open'></i> Thanks for your order
-      </h1>
+      <div>
+        {' '}
+        <h1>
+          <i class='fas fa-box-open'></i> Thanks for your order
+        </h1>
+        <Link to='/'>
+          <Button variant='light'>
+            <i class='fas fa-chevron-left'></i> back to shop
+          </Button>
+        </Link>
+      </div>
+
       <Row>
         <Col md={8}>
           <ListGroup variant='flush' style={{ padding: '10px' }}>
