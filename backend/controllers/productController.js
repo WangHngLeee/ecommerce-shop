@@ -29,10 +29,10 @@ const deleteProduct = asyncHandler(async (req, res) => {
 
 const createProduct = asyncHandler(async (req, res) => {
   const product = new Product({
-    name: 'simple name',
+    name: 'iPad 2021 Pro 256 GB Space Gray',
     price: 12,
     user: req.user._id,
-    image: 'images/sample.jpg',
+    image: '/images/sample.jpg',
     brand: 'simple brand',
     category: 'asdf',
     countInStock: 12,
