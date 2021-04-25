@@ -25,7 +25,7 @@ const ProductScreen = ({ history, match }) => {
   }
   return (
     <>
-      <Link className='btn btn-light my-3' to='/' transition='glide-right'>
+      <Link className='btn btn-light my-3' to='/'>
         <i class='fas fa-chevron-left'> Back </i>
       </Link>
       {loading ? (

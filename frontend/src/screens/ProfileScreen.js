@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Form, Button, Row, Col, Table } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { LinkContainer } from 'react-router-bootstrap'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
@@ -118,6 +119,20 @@ const ProfileScreen = ({ history, location }) => {
           <Loader />
         ) : errorOrders ? (
           <Message variant='danger'>{errorOrders}</Message>
+        ) : orders.length === 0 ? (
+          <>
+            <div className='alert alert-primary'>
+              {' '}
+              <strong>No order placed! </strong>{' '}
+              <Link to='/' style={{ textDecoration: 'none' }}>
+                <div className='d-flex justify-content-end'>
+                  <Button className='btn-sm secondary'>
+                    <i class='fas fa-chevron-left'></i> Back to Shop
+                  </Button>
+                </div>
+              </Link>
+            </div>
+          </>
         ) : (
           <Table striped bordered hover responsive className='table-sm'>
             <thead>

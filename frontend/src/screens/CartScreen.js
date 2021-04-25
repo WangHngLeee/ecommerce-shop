@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import Message from '../components/Message'
 import { Link } from 'react-router-dom'
 import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import { addToCart, removeFromCart } from '../actions/cartActions'
@@ -33,16 +32,20 @@ const CartScreen = ({ match, location, history }) => {
       <Col md={8}>
         <h1>Shopping Cart </h1>
         {cartItems.length === 0 ? (
-          <Message>
-            <i className='fas fa-sad-tear'></i> Your cart is empty{' '}
-            <Link style={{ textDecoration: 'none' }} to='/'>
+          <div className='alert alert-primary'>
+            {' '}
+            <strong>
+              <i className='fas fa-sad-tear'></i> Your cart is empty
+            </strong>
+            <Link to='/' style={{ textDecoration: 'none' }}>
               <div className='d-flex justify-content-end'>
-                <Button className='btn-sm' variant='info'>
-                  Back to Shop
+                <Button className='btn-sm secondary'>
+                  <i class='fas fa-chevron-left justify-content-end'></i> Back
+                  to Shop
                 </Button>
               </div>
             </Link>
-          </Message>
+          </div>
         ) : (
           <>
             <Link to='/'>

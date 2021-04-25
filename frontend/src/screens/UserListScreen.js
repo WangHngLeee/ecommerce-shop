@@ -33,7 +33,11 @@ const UserListScreen = ({ history }) => {
   }
   return (
     <>
+      <Link className='btn btn-light my-3' to='/'>
+        <i class='fas fa-chevron-left'> Back </i>
+      </Link>
       <h1>Users</h1>
+
       {loading ? (
         <Loader />
       ) : error ? (
