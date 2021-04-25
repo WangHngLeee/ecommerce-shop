@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { LinkContainer } from 'react-router-bootstrap'
+import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { Table, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
@@ -24,7 +24,7 @@ const UserListScreen = ({ history }) => {
     } else {
       history.push('/login')
     }
-  }, [dispatch, history, successDelete])
+  }, [dispatch, history, successDelete, userInfo])
 
   const deleteHandler = (id) => {
     if (window.confirm('Are you sure to delete?')) {
@@ -65,11 +65,11 @@ const UserListScreen = ({ history }) => {
                   )}
                 </td>
                 <td>
-                  <LinkContainer to={`/user/${user._id}/edit`}>
+                  <Link to={`/admin/user/${user._id}/edit`}>
                     <Button variant='light' className='btn-sm'>
                       <i className='fas fa-edit'></i>
                     </Button>
-                  </LinkContainer>
+                  </Link>
                   {!user.isAdmin && (
                     <Button
                       variant='danger'
