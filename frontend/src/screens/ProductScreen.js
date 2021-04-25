@@ -6,6 +6,8 @@ import Rating from '../components/Rating'
 import { listProductDetails } from '../actions/productActions'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
+// import { Link, glide } from 'react-tiger-transition'
+// import 'react-tiger-transition/styles/main.min.css'
 
 const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1)
@@ -23,7 +25,7 @@ const ProductScreen = ({ history, match }) => {
   }
   return (
     <>
-      <Link className='btn btn-light my-3' to='/'>
+      <Link className='btn btn-light my-3' to='/' transition='glide-right'>
         <i class='fas fa-chevron-left'> Back </i>
       </Link>
       {loading ? (
