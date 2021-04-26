@@ -7,6 +7,7 @@ import { Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { listProducts } from '../actions/productActions'
 import Paginate from '../components/Paginate'
+import ProductsTop from '../components/ProductsTop'
 
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword
@@ -23,6 +24,7 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
+      {!keyword && <ProductsTop />}
       <h1>Latest product</h1>
       {loading ? (
         <Loader />
