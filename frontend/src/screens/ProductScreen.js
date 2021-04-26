@@ -19,6 +19,7 @@ import {
   createProductReview,
 } from '../actions/productActions'
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants'
+import Meta from '../components/Meta'
 
 const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1)
@@ -75,6 +76,7 @@ const ProductScreen = ({ history, match }) => {
         <Message variant='danger'>{error}</Message>
       ) : (
         <>
+          <Meta title={product.name} />
           <Row>
             <Col md={6}>
               <Image src={product.image} alt={product.name} fluid />
@@ -112,7 +114,7 @@ const ProductScreen = ({ history, match }) => {
                     <Row>
                       <Col>Status:</Col>
                       <Col>
-                        {product.countInStock > 0 ? 'In Stock' : 'Out Of Stock'}
+                        {product.countInStock > 0 ? 'In Stock' : 'Sold Out'}
                       </Col>
                     </Row>
                   </ListGroup.Item>
@@ -141,15 +143,27 @@ const ProductScreen = ({ history, match }) => {
                   )}
 
                   <ListGroup.Item>
-                    <Button
-                      variant='success'
-                      onClick={addToCartHandler}
-                      className='btn-block green'
-                      type='button'
-                      disabled={product.countInStock === 0}
-                    >
-                      Add To Cart
-                    </Button>
+                    {product.countInStock === 0 ? (
+                      <Button
+                        variant='danger'
+                        onClick={addToCartHandler}
+                        className='btn-block'
+                        type='button'
+                        disabled={true}
+                      >
+                        Unavailable now
+                      </Button>
+                    ) : (
+                      <Button
+                        variant='success'
+                        onClick={addToCartHandler}
+                        className='btn-block'
+                        type='button'
+                        disabled={false}
+                      >
+                        Add To Cart
+                      </Button>
+                    )}
                   </ListGroup.Item>
                 </ListGroup>
               </Card>
