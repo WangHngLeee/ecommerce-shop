@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { listProducts } from '../actions/productActions'
 import Paginate from '../components/Paginate'
 import ProductsTop from '../components/ProductsTop'
-import { Helmet } from 'react-helmet'
 import Meta from '../components/Meta'
 
 const HomeScreen = ({ match }) => {
