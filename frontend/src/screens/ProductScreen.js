@@ -173,7 +173,7 @@ const ProductScreen = ({ history, match }) => {
             <Col md={6}>
               <h2>Reviews</h2>
               {product.reviews && product.reviews.length === 0 && (
-                <Message>No Reviews</Message>
+                <Message variant='dark'>No Reviews</Message>
               )}
               <ListGroup variant='flush'>
                 {product.reviews &&
@@ -237,9 +237,17 @@ const ProductScreen = ({ history, match }) => {
                       </Button>
                     </Form>
                   ) : (
-                    <Message>
-                      Please <Link to='/login'>sign in</Link> to write a review{' '}
-                    </Message>
+                    <div className='alert alert-primary'>
+                      {' '}
+                      <strong>Please Log In to write a review</strong>
+                      <Link to='/login' style={{ textDecoration: 'none' }}>
+                        <div className='d-flex justify-content-end'>
+                          <Button className='btn-sm secondary'>
+                            Login <i class='fas fa-chevron-right'></i>
+                          </Button>
+                        </div>
+                      </Link>
+                    </div>
                   )}
                 </ListGroup.Item>
               </ListGroup>
