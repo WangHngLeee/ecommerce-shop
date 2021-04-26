@@ -92,10 +92,15 @@ const OrderScreen = ({ match, history }) => {
   ) : (
     <>
       <div>
-        {' '}
-        <h1>
-          <i class='fas fa-box-open'></i> Thanks for your order
-        </h1>
+        {userInfo.isAdmin ? (
+          <h1>
+            <i class='fas fa-box-open'></i> Order Reciept
+          </h1>
+        ) : (
+          <h1>
+            <i class='fas fa-box-open'></i> Thanks for your order
+          </h1>
+        )}
         <Link to='/'>
           <Button variant='light'>
             <i class='fas fa-chevron-left'></i> back to shop
