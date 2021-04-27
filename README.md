@@ -20,6 +20,8 @@
 
 More features are coming.
 
+Now you can try it out here: https://simpshop.herokuapp.com/
+
 ## 🚀 Tech
 
 ##### SimpShop uses popular MERN full-stack skill sets
