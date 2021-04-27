@@ -16,8 +16,7 @@ const Header = () => {
   }
   return (
     <Navbar
-      bg='dark'
-      variant='dark'
+      bg='light'
       expand='lg'
       collapseOnSelect
       sticky='top'
