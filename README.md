@@ -11,6 +11,7 @@
 - Uploading images with **AWS S3**
 - Product reviews and ratings
 - Top rating products slides
+- Using jsonwebtoken to authenticate user actions
 - Product pagination
 - Searching feature
 - User profile with orders
@@ -21,6 +22,13 @@
 More features are coming.
 
 Now you can try it out here: https://simpshop.herokuapp.com/
+
+**PayPal Test Account**: simpshop@test.com
+
+**Password**: Simpshop1234
+
+Current using Paypal Dev account in the payment process. Try this account when you need login at PayPal page.
+
 
 ## 🚀 Tech
 
