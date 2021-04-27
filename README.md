@@ -11,6 +11,7 @@
 - Uploading images with **AWS S3**
 - Product reviews and ratings
 - Top rating products slides
+- Using jsonwebtoken to authenticate user actions
 - Product pagination
 - Searching feature
 - User profile with orders
