@@ -22,9 +22,9 @@ More features are coming.
 
 Now you can try it out here: https://simpshop.herokuapp.com/
 
-**PayPal Test Account**: sb-mdqto6026435@personal.example.com
+**PayPal Test Account**: simpshop@test.com
 
-**Password**: vZ9rgOF!
+**Password**: Simpshop1234
 
 Current using Paypal Dev account in the payment process. Try this account when you need login at PayPal page.
 
