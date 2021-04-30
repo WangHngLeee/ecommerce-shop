@@ -9,6 +9,9 @@ node_modules/
 # testing
 /coverage
 
+# vscode
+.vscode
+
 # production
 /frontent/build
 
