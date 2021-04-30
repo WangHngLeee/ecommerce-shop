@@ -13,7 +13,7 @@
 - Top rating products slides
 - Using jsonwebtoken to authenticate user actions
 - Product pagination
-- Searching feature
+- Searching feature (only available after log in)
 - User profile with orders
 - Admin user/products/orders management
 - Mark orders as delivered option
