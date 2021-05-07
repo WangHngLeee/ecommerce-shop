@@ -29,7 +29,6 @@ Now you can try it out here: https://simpshop.herokuapp.com/
 
 Current using Paypal Dev account in the payment process. Try this account when you need login at PayPal page.
 
-
 ## 🚀 Tech
 
 ##### SimpShop uses popular MERN full-stack skill sets
